@@ -376,6 +376,46 @@
   }
 
 
+  /* Gift gallery section */
+  .gift-section {
+    text-align: center;
+  }
+  .gift-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold-dark);
+    margin-bottom: 6px;
+  }
+  .gift-subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text-soft);
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .gift-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gift-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1;
+  }
+  .gift-item:active {
+    transform: scale(0.97);
+  }
+  .gift-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   /* Gallery section */
   .gallery-section {
     text-align: center;
@@ -636,6 +676,20 @@
           <div class="benefit-emoji">💝</div>
           <div class="benefit-label">超级宠粉<br>试营业专属折扣</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Gallery -->
+  <section id="gift" class="section-hidden">
+    <div class="gift-section">
+      <div class="gift-title">宠粉好礼</div>
+      <div class="gift-subtitle">· 进店即享，惊喜不断 ·</div>
+      <div class="gift-grid">
+        <div class="gift-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/gift-1.jpg" alt="" loading="lazy"></div>
+        <div class="gift-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/gift-2.jpg" alt="" loading="lazy"></div>
+        <div class="gift-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/gift-3.jpg" alt="" loading="lazy"></div>
+        <div class="gift-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/gift-4.jpg" alt="" loading="lazy"></div>
       </div>
     </div>
   </section>
