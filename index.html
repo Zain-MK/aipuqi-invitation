@@ -76,6 +76,31 @@
 
   .cover {
 
+
+  .cover-top-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40vh;
+    min-height: 180px;
+    max-height: 300px;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .cover-top-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cover-top-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%);
+    pointer-events: none;
+  }
+
     background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
 
     background-size: cover;
@@ -83,9 +108,6 @@
     background-position: center;
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
 
     min-height: 100vh;
 
@@ -125,14 +147,6 @@
 
   }
 
-
-  .cover-bg-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 1;
-    pointer-events: none;
-  }
 
   .sparkle-container {
     position: absolute;
@@ -244,12 +258,44 @@
     75% { opacity: 0.3; transform: scale(0.5) rotate(180deg); }
   }
 
+  .sparkle-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #C9A96E;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgba(201,169,110,0.4);
+    opacity: 0;
+    animation: sparkle var(--dur) ease-in-out infinite;
+    animation-delay: var(--delay);
+  }
+  .sparkle.small {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 4px 1px rgba(201,169,110,0.3);
+  }
+  .sparkle.bright {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 10px 4px rgba(201,169,110,0.5);
+  }
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+    25% { opacity: 1; transform: scale(1) rotate(180deg); }
+    50% { opacity: 0.8; transform: scale(0.8) rotate(360deg); }
+    75% { opacity: 0.3; transform: scale(0.5) rotate(180deg); }
+  }
+
   .cover-ornament {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -269,9 +315,6 @@
   .cover-label {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -297,9 +340,6 @@
   .cover-title {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -326,9 +366,6 @@
   .cover-sub {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -354,9 +391,6 @@
   .cover-tagline {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -380,9 +414,6 @@
   .divider-line {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -406,9 +437,6 @@
   .cover-date {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
     z-index: 3;
 
     z-index: 1;
@@ -490,9 +518,6 @@
   .content {
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
 
     z-index: 1;
 
@@ -626,9 +651,6 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.04);
 
     position: relative;
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
-    background-size: cover;
-    background-position: center;
 
     overflow: hidden;
 
@@ -1310,6 +1332,11 @@
 <!-- ========== Cover ========== -->
 
 <div class="cover">
+  <div class="cover-top-banner">
+    <img src="https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg" alt="" class="cover-top-img">
+    <div class="cover-top-overlay"></div>
+  </div>
+  <div class="sparkle-container" id="sparkle-container"></div>
 
   <div class="cover-bg-img"></div>
   <div class="cover-ornament">
