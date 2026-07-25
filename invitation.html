@@ -77,35 +77,9 @@
   .cover {
 
 
-  .cover-top-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40vh;
-    min-height: 180px;
-    max-height: 300px;
-    overflow: hidden;
-    z-index: 0;
-  }
-  .cover-top-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .cover-top-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%);
-    pointer-events: none;
-  }
 
-    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
 
-    background-size: cover;
 
-    background-position: center;
 
     position: relative;
 
@@ -133,28 +107,8 @@
   }
 
 
-  .cover-bg-img {
 
-    position: absolute;
-
-    inset: 0;
-
-    background: rgba(0,0,0,0.55);
-
-    z-index: 1;
-
-    pointer-events: none;
-
-  }
-
-
-  .sparkle-container {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    overflow: hidden;
-  }
+}
   .sparkle {
     position: absolute;
     width: 4px;
@@ -201,35 +155,8 @@
 
   }
 
-  .cover-bg-overlay {
 
-    content: '';
-    position: absolute;
-
-    inset: 0;
-
-    background:
-
-      url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg) center/cover no-repeat;
-
-    opacity: 0.2;
-
-    pointer-events: none;
-
-  }
-
-
-
-  /* Decorative top ornament */
-
-  /* Gold sparkle particles */
-  .sparkle-container {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-  }
+}
   .sparkle {
     position: absolute;
     width: 4px;
@@ -259,6 +186,7 @@
   }
 
   .sparkle-container {
+    z-index: 0;
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -1338,7 +1266,6 @@
   </div>
   <div class="sparkle-container" id="sparkle-container"></div>
 
-  <div class="cover-bg-img"></div>
   <div class="cover-ornament">
 
     <svg viewBox="0 0 60 60" fill="none">
