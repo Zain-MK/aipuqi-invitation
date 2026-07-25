@@ -375,6 +375,51 @@
     line-height: 1.5;
   }
 
+
+  /* Gallery section */
+  .gallery-section {
+    text-align: center;
+  }
+  .gallery-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold-dark);
+    margin-bottom: 6px;
+  }
+  .gallery-subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text-soft);
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1;
+  }
+  .gallery-item:active {
+    transform: scale(0.97);
+  }
+  .gallery-item.tall {
+    grid-row: span 2;
+    aspect-ratio: 1/1.5;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   /* CTA section */
   .cta-section {
     text-align: center;
@@ -549,6 +594,24 @@
             <div class="info-item-value" style="margin-top:4px;"><a href="tel:13577198070" style="color:var(--gold-dark);text-decoration:none;">135 7719 8070</a></div>
           </div>
         </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section-hidden">
+    <div class="gallery-section">
+      <div class="gallery-title">空间之美</div>
+      <div class="gallery-subtitle">· 全新空间美学，邀您亲鉴 ·</div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-1.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-2.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item tall"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-3.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-4.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-5.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-6.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-7.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://zain-mk.github.io/aipuqi-invitation/images/effect-8.jpg" alt="" loading="lazy"></div>
+      </div>
     </div>
   </section>
 
