@@ -76,7 +76,16 @@
 
   .cover {
 
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+
+    background-size: cover;
+
+    background-position: center;
+
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
 
     min-height: 100vh;
 
@@ -90,6 +99,7 @@
 
     justify-content: center;
 
+
     background: linear-gradient(160deg, #2C2C2C 0%, #1A1A1A 50%, #2C2C2C 100%);
 
     padding: 40px 24px;
@@ -98,6 +108,65 @@
 
     overflow: hidden;
 
+  }
+
+
+  .cover-bg-img {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+  }
+
+
+  .cover-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .sparkle-container {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #C9A96E;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgba(201,169,110,0.4);
+    opacity: 0;
+    animation: sparkle var(--dur) ease-in-out infinite;
+    animation-delay: var(--delay);
+  }
+  .sparkle.small {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 4px 1px rgba(201,169,110,0.3);
+  }
+  .sparkle.bright {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 10px 4px rgba(201,169,110,0.5);
+  }
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+    25% { opacity: 1; transform: scale(1) rotate(180deg); }
+    50% { opacity: 0.8; transform: scale(0.8) rotate(360deg); }
+    75% { opacity: 0.3; transform: scale(0.5) rotate(180deg); }
   }
 
   .cover::before {
@@ -118,13 +187,70 @@
 
   }
 
+  .cover-bg-overlay {
+
+    content: '';
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+      url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg) center/cover no-repeat;
+
+    opacity: 0.2;
+
+    pointer-events: none;
+
+  }
+
 
 
   /* Decorative top ornament */
 
+  /* Gold sparkle particles */
+  .sparkle-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #C9A96E;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgba(201,169,110,0.4);
+    opacity: 0;
+    animation: sparkle var(--dur) ease-in-out infinite;
+    animation-delay: var(--delay);
+  }
+  .sparkle.small {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 4px 1px rgba(201,169,110,0.3);
+  }
+  .sparkle.bright {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 10px 4px rgba(201,169,110,0.5);
+  }
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+    25% { opacity: 1; transform: scale(1) rotate(180deg); }
+    50% { opacity: 0.8; transform: scale(0.8) rotate(360deg); }
+    75% { opacity: 0.3; transform: scale(0.5) rotate(180deg); }
+  }
+
   .cover-ornament {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
@@ -143,6 +269,10 @@
   .cover-label {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
@@ -167,12 +297,17 @@
   .cover-title {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
     font-size: 42px;
 
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSongti-SC-Bold", "SimSun", serif;
 
     letter-spacing: 8px;
 
@@ -191,6 +326,10 @@
   .cover-sub {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
@@ -215,6 +354,10 @@
   .cover-tagline {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
@@ -237,6 +380,10 @@
   .divider-line {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
@@ -259,6 +406,10 @@
   .cover-date {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
 
     z-index: 1;
 
@@ -339,6 +490,9 @@
   .content {
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
 
     z-index: 1;
 
@@ -424,7 +578,8 @@
 
     color: var(--gold-dark);
 
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSongti-SC-Bold", "SimSun", serif;
 
     letter-spacing: 2px;
 
@@ -471,6 +626,9 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.04);
 
     position: relative;
+    background-image: url(https://zain-mk.github.io/aipuqi-invitation/images/cover-bg.jpg);
+    background-size: cover;
+    background-position: center;
 
     overflow: hidden;
 
@@ -514,7 +672,8 @@
 
     font-size: 18px;
 
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSongti-SC-Bold", "SimSun", serif;
 
     letter-spacing: 4px;
 
@@ -574,7 +733,8 @@
 
     font-size: 20px;
 
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSongti-SC-Bold", "SimSun", serif;
 
     letter-spacing: 4px;
 
@@ -636,7 +796,8 @@
 
     font-size: 32px;
 
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSongti-SC-Bold", "SimSun", serif;
 
     color: var(--text-dark);
 
@@ -1150,6 +1311,7 @@
 
 <div class="cover">
 
+  <div class="cover-bg-img"></div>
   <div class="cover-ornament">
 
     <svg viewBox="0 0 60 60" fill="none">
