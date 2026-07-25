@@ -1640,6 +1640,22 @@
 
 
 
+
+  // ===== Sparkle particles =====
+  (function() {
+    var c = document.getElementById("sparkle-container");
+    if (!c) return;
+    for (var i = 0; i < 20; i++) {
+      var d = document.createElement("div");
+      d.className = "sparkle" + (i % 3 === 0 ? " bright" : i % 2 === 0 ? " small" : "");
+      d.style.left = (Math.random() * 95 + 2) + "%";
+      d.style.top = (Math.random() * 95 + 2) + "%";
+      d.style.setProperty("--dur", (Math.random() * 3 + 2.5).toFixed(1) + "s");
+      d.style.setProperty("--delay", (Math.random() * 5).toFixed(1) + "s");
+      c.appendChild(d);
+    }
+  })();
+
   // ===== Intersection Observer for reveal =====
 
   const sections = document.querySelectorAll('.section-hidden');
