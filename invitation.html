@@ -1,0 +1,662 @@
+﻿?<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="艾璞琪生活馆盛大启幕，2026年8月1日试营业，宠粉福利·甜品咖啡·全新空间美学，期待与您相遇。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="艾璞琪生活馆 · 试营业邀请函">
+<meta property="og:description" content="从茶合里到艾璞琪，全新升级，更懂美更懂你。2026年8月1日盛大启幕，试营业宠粉福利等你来。">
+<meta property="og:url" content="https://zainx15.gitee.io/aipuqi-invitation">
+<meta property="og:image" content="https://zainx15.gitee.io/aipuqi-invitation/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<title>艾璞琪生活馆 · 试营业邀请函</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9A96E;
+    --gold-light: #E8D5A3;
+    --gold-dark: #A88B4E;
+    --cream: #FAF7F0;
+    --warm-bg: #F5F0E8;
+    --text-dark: #2C2C2C;
+    --text-soft: #5C5C5C;
+    --rose: #D4A0A0;
+  }
+
+  body {
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--warm-bg);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Cover ===== */
+  .cover {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, #2C2C2C 0%, #1A1A1A 50%, #2C2C2C 100%);
+    padding: 40px 24px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(201,169,110,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(212,160,160,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Decorative top ornament */
+  .cover-ornament {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeDown 1s ease 0.2s forwards;
+  }
+  .cover-ornament svg { width: 60px; height: 60px; }
+
+  .cover-label {
+    position: relative;
+    z-index: 1;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--gold-light);
+    opacity: 0.7;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeDown 0.8s ease 0.4s forwards;
+  }
+
+  .cover-title {
+    position: relative;
+    z-index: 1;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeDown 0.8s ease 0.6s forwards;
+  }
+
+  .cover-sub {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: var(--gold-light);
+    opacity: 0.8;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeDown 0.8s ease 0.8s forwards;
+  }
+
+  .cover-tagline {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--rose);
+    opacity: 0;
+    animation: fadeDown 0.8s ease 1.0s forwards;
+  }
+
+  /* decorative line */
+  .divider-line {
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 24px auto;
+    opacity: 0;
+    animation: fadeDown 0.8s ease 1.0s forwards;
+  }
+
+  .cover-date {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold-light);
+    opacity: 0.5;
+    opacity: 0;
+    animation: fadeDown 0.8s ease 1.2s forwards;
+  }
+
+  /* scroll hint */
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    animation: fadeDown 0.8s ease 2.0s forwards;
+  }
+  .scroll-hint span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.35);
+  }
+  .scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 1.5px solid rgba(255,255,255,0.3);
+    border-bottom: 1.5px solid rgba(255,255,255,0.3);
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+  }
+
+  /* ===== Main Content ===== */
+  .content {
+    position: relative;
+    z-index: 1;
+    background: var(--cream);
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 50px 16px;
+    max-width: 420px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Letter section */
+  .letter-section {
+    text-align: left;
+  }
+  .letter-section .greeting {
+    font-size: 16px;
+    color: var(--text-soft);
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  .letter-section p {
+    font-size: 15px;
+    color: var(--text-soft);
+    margin-bottom: 18px;
+    text-indent: 2em;
+    line-height: 2;
+  }
+
+  .highlight-text {
+    color: var(--gold-dark);
+    font-weight: 500;
+  }
+  .highlight-name {
+    color: var(--gold-dark);
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .letter-section .closing {
+    text-indent: 0;
+    margin-top: 24px;
+    text-align: right;
+    font-style: normal;
+    color: var(--gold-dark);
+  }
+
+  /* Info section */
+  .info-section {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 36px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    color: var(--gold);
+  }
+
+  .info-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+  }
+
+  .info-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0ede6;
+  }
+  .info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .info-item-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold-dark);
+    margin-bottom: 6px;
+  }
+  .info-item-value {
+    font-size: 16px;
+    color: var(--text-soft);
+    letter-spacing: 1px;
+  }
+  .info-item-value strong {
+    color: var(--gold-dark);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+  }
+
+  /* Countdown */
+  .countdown-section {
+    text-align: center;
+    padding: 30px 16px 10px;
+  }
+
+  .countdown-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold-dark);
+    margin-bottom: 16px;
+  }
+
+  .countdown-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .countdown-num {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1;
+    letter-spacing: 2px;
+    min-width: 52px;
+    text-align: center;
+  }
+  .countdown-unit {
+    font-size: 11px;
+    color: var(--text-soft);
+    margin-top: 4px;
+    letter-spacing: 2px;
+  }
+  .countdown-colon {
+    font-size: 28px;
+    color: var(--gold);
+    font-weight: 300;
+    padding: 0 2px;
+    margin-bottom: 16px;
+  }
+
+  /* Benefits section */
+  .benefits-section {
+    text-align: center;
+  }
+  .benefits-section .section-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold-dark);
+    margin-bottom: 24px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .benefit-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease;
+  }
+  .benefit-card:active { transform: scale(0.97); }
+
+  .benefit-emoji {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .benefit-label {
+    font-size: 13px;
+    color: var(--text-soft);
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+
+  /* CTA section */
+  .cta-section {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+    border-radius: 14px;
+    padding: 36px 20px;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+  .cta-card p {
+    font-size: 14px;
+    line-height: 2;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 14px 48px;
+    border: 1.5px solid var(--gold);
+    border-radius: 30px;
+    color: var(--gold);
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .cta-btn:active {
+    background: var(--gold);
+    color: #1A1A1A;
+  }
+  .cta-hint {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 16px;
+    letter-spacing: 2px;
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--cream);
+    text-align: center;
+    padding: 24px 20px 36px;
+    font-size: 12px;
+    color: rgba(0,0,0,0.25);
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+
+  /* ===== Animations ===== */
+  @keyframes fadeDown {
+    0% { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(6px); }
+  }
+
+  /* ===== Intersection Observer ===== */
+  .section-hidden {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== Cover ========== -->
+<div class="cover">
+  <div class="cover-ornament">
+    <svg viewBox="0 0 60 60" fill="none">
+      <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.3"/>
+      <path d="M30 14 L34 26 L46 26 L36 34 L40 46 L30 38 L20 46 L24 34 L14 26 L26 26Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="cover-label">INVITATION</div>
+  <h1 class="cover-title">艾璞琪生活馆</h1>
+  <div class="cover-sub">试营业邀请函</div>
+  <div class="cover-tagline">更懂美 · 更懂你</div>
+  <div class="divider-line"></div>
+  <div class="cover-date">2026.08.01 · 盛大启幕</div>
+  <div class="scroll-hint">
+    <span>向下翻阅</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</div>
+
+<!-- ========== Content ========== -->
+<div class="content">
+
+  <!-- Letter -->
+  <section id="letter" class="section-hidden">
+    <div class="letter-section">
+      <div class="greeting">亲爱的朋友们：</div>
+      <p>
+        那间曾经陪您一起的「<span class="highlight-text">茶合里</span>」，被我按下了暂停键。有人问我们为什么要把刚开业一年的店关了重装？我想，是为了配得上现在这个更懂美、更自信的你。
+      </p>
+      <p>
+        经过近两个月的打磨，我们的新店将正式更名为「<span class="highlight-name">艾璞琪生活馆</span>」，我们将以全新的空间美学与更严苛的选品标准回归，只为给你更好的穿搭体验。这里不再只是一个卖衣服的地方，而是一家更有温度的服装生活馆。
+      </p>
+      <p>
+        我们将于 <span class="highlight-text">2026年8月1日</span> 盛大启幕，试营业期间我们准备了超级宠粉福利，现场还备有精致的甜品和咖啡，<span class="highlight-name">艾璞琪</span>全体员工将以新的面貌热切期待与您相遇。
+      </p>
+      <div class="closing">—— 艾璞琪生活馆 敬邀</div>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section id="countdown" class="section-hidden">
+    <div class="countdown-section">
+      <div class="countdown-label">距 开 业 还 有</div>
+      <div class="countdown-grid" id="countdown-grid">
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-days">00</span>
+          <span class="countdown-unit">天</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <span class="countdown-unit">时</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-minutes">00</span>
+          <span class="countdown-unit">分</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-seconds">00</span>
+          <span class="countdown-unit">秒</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info -->
+  <section id="info" class="section-hidden">
+    <div class="info-section">
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="6" y="10" width="36" height="28" rx="2"/>
+            <circle cx="24" cy="26" r="6"/>
+            <path d="M18 10 L24 6 L30 10" stroke-linejoin="round"/>
+            <path d="M12 16 L18 16" stroke-opacity="0.5"/>
+            <path d="M30 16 L36 16" stroke-opacity="0.5"/>
+            <path d="M12 20 L16 20" stroke-opacity="0.4"/>
+            <path d="M32 20 L36 20" stroke-opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="info-title">活动信息</div>
+        <div class="info-item">
+          <div class="info-item-label">· 店铺名称 ·</div>
+          <div class="info-item-value"><strong>艾璞琪生活馆</strong></div>
+        </div>
+        <div class="info-item">
+          <div class="info-item-label">· 启幕日期 ·</div>
+          <div class="info-item-value">2026年8月1日</div>
+        </div>
+          <div class="info-item">
+            <div class="info-item-label">· 地址 ·</div>
+            <div class="info-item-value">郑州市金水区商鼎路<br>国弘巨正广场B座底商</div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-label">· 预约热线 ·</div>
+            <div class="info-item-value"><a href="tel:13598088161" style="color:var(--gold-dark);text-decoration:none;">135 9808 8161</a></div>
+            <div class="info-item-value" style="margin-top:4px;"><a href="tel:13577198070" style="color:var(--gold-dark);text-decoration:none;">135 7719 8070</a></div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits" class="section-hidden">
+    <div class="benefits-section">
+      <div class="section-title">试 营 业 宠 粉 福 利</div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-emoji">🎁</div>
+          <div class="benefit-label">进店有礼<br>惊喜好礼相送</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-emoji">☕</div>
+          <div class="benefit-label">精致甜品<br>手冲咖啡款待</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-emoji">👗</div>
+          <div class="benefit-label">新品穿搭<br>专属搭配建议</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-emoji">💝</div>
+          <div class="benefit-label">超级宠粉<br>试营业专属折扣</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="section-hidden">
+    <div class="cta-section">
+      <div class="cta-card">
+        <p>
+          期待与您在新的空间相遇<br>
+          一同开启关于美的更多可能性        </p>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+          <a href="tel:13598088161" class="cta-btn">📞 135 9808 8161</a>
+          <a href="tel:13577198070" class="cta-btn" style="font-size:14px;padding:12px 36px;">📞 135 7719 8070</a>
+        </div>
+        <div class="cta-hint">· 点击直接拨打电话 ·</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="footer">
+  艾璞琪生活馆 · AI PU QI Lifestyle<br>
+  做一家有温度的服装生活馆
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== Intersection Observer for reveal =====
+  const sections = document.querySelectorAll('.section-hidden');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.classList.remove('section-hidden');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+  sections.forEach(function(s) { observer.observe(s); });
+
+  // ===== Countdown =====
+  var targetDate = new Date(2026, 7, 1, 0, 0, 0).getTime(); // Aug 1 2026
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function updateCountdown() {
+    var now = Date.now();
+    var diff = targetDate - now;
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent = '00';
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-minutes').textContent = '00';
+      document.getElementById('cd-seconds').textContent = '00';
+      return;
+    }
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('cd-days').textContent = pad(days);
+    document.getElementById('cd-hours').textContent = pad(hours);
+    document.getElementById('cd-minutes').textContent = pad(minutes);
+    document.getElementById('cd-seconds').textContent = pad(seconds);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ===== CTA click =====
+  var btn = document.getElementById('btn-call');
+  if (btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.textContent = '📞 拨号功能可替换为您的电话';
+      var self = this;
+      setTimeout(function() { self.textContent = '📞 我要预约'; }, 2000);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
